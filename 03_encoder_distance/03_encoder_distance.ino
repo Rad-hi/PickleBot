@@ -23,8 +23,8 @@ void setup() {
 void loop() {
 
   // Go 1 meter forward
-  while(right_wheel_encoder->get_count() < GET_COUNT_TO_TRAVEL_DIST(1.0)
-     && left_wheel_encoder->get_count() < GET_COUNT_TO_TRAVEL_DIST(1.0)){    
+  while(right_wheel_encoder->get_count() < GET_COUNT_TO_TRAVEL_DIST(0.2)
+     && left_wheel_encoder->get_count() < GET_COUNT_TO_TRAVEL_DIST(0.2)){    
     forward(ROBOT_SPEED, ROBOT_SPEED);
   }
 

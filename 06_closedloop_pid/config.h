@@ -21,6 +21,11 @@
 
   // Kinematics parameters
   #define TICKS_PER_ROTATION                  80
-  #define GET_COUNT_TO_TRAVEL_DIST(DIST)      ((int32_t)((float)(DIST)/(float)(WHEEL_CIRCUMFERENCE))*(TICKS_PER_ROTATION))
-    
+  #define GET_COUNT_TO_TRAVEL_DIST(DIST)      (int32_t)(((float)(DIST)/(float)(WHEEL_CIRCUMFERENCE))*(TICKS_PER_ROTATION))
+
+  /* OTA params */
+  #define WIFI_SSID                           "tsyp"
+  #define WIFI_PASSWORD                       "66669420"
+  #define OTA_IP                              192,168,103,69
+
 #endif // __CONFIG_H__

@@ -52,7 +52,7 @@
     analogWrite(ENABLE_2_PIN, speed_l);
   }
   
-  void sharp_right(uint8_t speed_l, uint8_t speed_r){
+  void sharp_left(uint8_t speed_l, uint8_t speed_r){
     /* The pin numbers and high, low values might be different depending on your connections */
     digitalWrite(MOTOR_1_INPUT_1, LOW);
     digitalWrite(MOTOR_1_INPUT_2, HIGH);
@@ -62,7 +62,7 @@
     analogWrite(ENABLE_2_PIN, speed_l);
   }
   
-  void sharp_left(uint8_t speed_l, uint8_t speed_r){
+  void sharp_right(uint8_t speed_l, uint8_t speed_r){
     /* The pin numbers and high, low values might be different depending on your connections */
     digitalWrite(MOTOR_1_INPUT_1, HIGH);
     digitalWrite(MOTOR_1_INPUT_2, LOW);

@@ -1,7 +1,7 @@
 #ifndef __CONFIG_H__
   #define __CONFIG_H__
 
-  #define ROBOT_SPEED                         140
+  #define ROBOT_SPEED                         120
     
   // Pins
   #define ENABLE_1_PIN                        14
@@ -22,5 +22,5 @@
   // Kinematics parameters
   #define TICKS_PER_ROTATION                  80
   #define GET_COUNT_TO_TRAVEL_DIST(DIST)      (int32_t)(((float)(DIST)/(float)(WHEEL_CIRCUMFERENCE))*(TICKS_PER_ROTATION))
-    
+
 #endif // __CONFIG_H__

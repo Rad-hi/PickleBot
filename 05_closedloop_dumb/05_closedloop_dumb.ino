@@ -7,6 +7,10 @@ encoder_ab *right_wheel_encoder;
 encoder_ab *left_wheel_encoder;
 
 void setup() {
+  // Launch non-blocking tasks that listen for the firmware update requests
+  setup_wifi();
+  setup_OTA_firmware_update();
+  
   right_wheel_encoder = new encoder_ab();
   right_wheel_encoder->begin(RIGHT_ENCODER_A_PIN, RIGHT_ENCODER_B_PIN, 
                              GET_ISR_ENC(right_wheel_encoder, handle_interrupt_A),
@@ -43,16 +47,16 @@ void loop() {
     r_count = right_wheel_encoder->get_count();
     
     if(diff_r > diff_l){
-//      r_speed -= 1;
+      r_speed -= 1;
       l_speed += 1;
     }
     else{
-//      r_speed += 1;
+      r_speed += 1;
       l_speed -= 1;
     }
 
     // Give time for the motors to respond to the changes
-    delay(80);
+    delay(20);
   }
 
   // Stop forever
